@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Hidden Junk</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Hidden Junk</h1>
+
+		<nav>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#products">Product</a></li>
+				<li><a href="#about">About</a></li>
+				<!-- <li><a href="#contact">Contact</a></li> -->
+
+			</ul>
+		</nav>
+
+	</header>
+
+	<section id="home" class="banner">
+		<h2>Welcome to Hidden Junk</h2>
+		<p>Discover the latest fashion trends</p>
+
+		<a href="#products" class="cta-button">Shop Now</a>
+
+	</section>
+
+	<section id="products" class="featured-products">
+		
+		<div class="product">
+			<img src="product1.jpg" alt="Diamond Supply Co.">
+			<h3>Diamond Supply Co. Tee</h3>
+			<p>Size: Medium</p>
+			<p>Price: 399.99</p> 
+		</div>
+
+		<div class="product">
+			<img src="product2.jpg" alt="Palace Skate">
+			<h3>Palace Skate Tee</h3>
+			<p>Size: Large</p>
+			<p>Price: 399.99</p>
+		</div>
+
+		<div class="product">
+			<img src="product3.jpg" alt="Thrasher">
+			<h3>Thrasher Tee</h3>
+			<p>Size: Small</p>
+			<p>Price: 399.99</p>
+		</div>
+
+		<div class="product">
+			<img src="product4.jpg" alt="Brixton">
+			<h3>Brixton Tee</h3>
+			<p>Size: Medium</p>
+			<p>Price: 399.99</p>
+		</div>
+
+		<!-- <div class="product">
+			<img src="product.jpg" alt="Skate and Destroy">
+			<h3>Skate and Destroy Hoodie</h3>
+			<p>Size: Medium</p>
+			<p>Price: 599.99</p>
+		</div>
+
+		<div class="product">
+			<img src="product.jpg" alt="Champion">
+			<h3>Champion Tee</h3>
+			<p>Size: Large</p>
+			<p>Price: 399.99</p>
+		</div>
+
+		<div class="product">
+			<img src="product.jpg" alt="Death Row Records">
+			<h3>Death Row Records Tee</h3>
+			<p>Size: Medium</p>
+			<p>Price: 399.99</p>
+		</div>
+
+		<div class="product">
+			<img src="product.jpg" alt="Billabong">
+			<h3>Vintage Billabong Tee</h3>
+			<p>Size: Large</p>
+			<p>Price: 399.99</p>
+		</div> -->
+
+
+	</section>
+
+	<section id="about" class="about">
+		<h2>About Our Thrifted Garments</h2>
+		<p>At Clothing Store, we take pride in offering a unique collection of thrifted garments sourced from Ukay Ukay thrift shops. Our mission is to provide our customers with one-of-a-kind, sustainable fashion pieces that tell a story.</p>
+		<p>Each garment in our collection is carefully selected, cleaned, and restored to its best condition, ensuring that you get both quality and style at affordable prices.</p>
+		<p>By choosing thrifted garments, you not only save money but also contribute to the reduction of textile waste and environmental impact. Explore our collection and make a fashionable and eco-conscious choice today.</p>
+	</section>
+
+	<section id="contact" class="contact">
+		
+	</section>
+
+	<footer>
+		<p>&copy; 2023 Hidden Junk Thrift Store</p>
+	</footer>
+
+	<script type="text/javascript">
+		document.querySelectorAll('nav a').forEach(anchor => 
+		{
+			anchor.addEventListener('click', function (e) 
+			{
+				e.preventDefault();
+
+				const targetId = this.getAttribute('href').substring(1);
+				const target = document.getElementById(targetId);
+
+				window.scroll(
+				{
+					behavior: 'smooth',
+					left: 0,
+					top: target.offsetTop - 50, 
+				});
+			});
+		});
+
+		/*const productSlder = document.querySelector('.product-slider');
+		const slide = document.querySelector('.slide');
+		let currentIndex = 0;
+		const prevButton = document.getElementById('prevBtn');
+		const nextButton = document.getElementById('nextBtn');*/
+
+
+		/*function nextSlide()
+		{
+			currentIndex++;
+			if (currentIndex > 3) 
+			{
+				currentIndex = 0;
+			}
+
+			const translateX = -currentIndex * 100;
+			slide.style.transform = 'translateX(${translateX}%)';
+		}
+
+		function prevSlide()
+		{
+			currentIndex--;
+			if (currentIndex > 0) 
+			{
+				currentIndex = 3;
+			}
+		}
+
+		nextButton.addEventListener('click', nextSlide);
+		prevButton.addEventListener('click', prevSlide);*/
+	</script>
+</body>
+</html>
